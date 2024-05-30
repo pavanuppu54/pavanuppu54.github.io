@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Uppu Jyothi Naga Pavan</h1>
-            <p>Welcome to my professional portfolio. Here, you can learn about my skills, projects, and experiences.</p>
+    <header class="animated-header">
+        <div class="container header-container">
+            <div class="photo">
+                <img src="your-photo.jpg" alt="Your Photo" class="responsive-photo">
+            </div>
+            <div class="header-content">
+                <h1>Uppu Jyothi Naga Pavan</h1>
+                <p>Welcome to my professional portfolio. Here, you can learn about my skills, projects, and experiences.</p>
+            </div>
         </div>
     </header>
-    <nav>
+    <nav class="animated-nav">
         <div class="container">
             <ul>
                 <li><a href="#skills">Skills</a></li>
@@ -26,6 +31,17 @@
         </div>
     </nav>
     <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p><strong>Address:</strong> Your Address Here</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/pavanuppu54" target="_blank">https://github.com/pavanuppu54</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pavan-uppu-478598249/" target="_blank">https://www.linkedin.com/in/pavan-uppu-478598249/</a></p>
+                <p><strong>Email:</strong> <a href="mailto:2100030563cseh@gmail.com">2100030563cseh@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 83095 33361</p>
+                <p><strong>Resume:</strong> <a href="resume.pdf" download>Download PDF</a></p>
+            </div>
+        </section>
         <section id="skills" class="section">
             <div class="container">
                 <h2>Technical Skills</h2>
@@ -73,8 +89,9 @@
                     <h3>WellCare</h3>
                     <p><strong>Framework:</strong> Django (Python web framework)</p>
                     <p><strong>Key Features:</strong> Email Verification, Easy Appointment Booking, Patient Feedback</p>
-                    <p><strong>Description:</strong> Created a healthcare management system with Django, featuring secure email login, patient feedback, appointment booking, and doctor profiles, all aimed at improving healthcare efficiency.</p>
+                    <p><strong>Description:</strong> Created a healthcare management system with Django, featuring secure email login, patient feedback, appointment booking, and doctor profiles, all aimed at improving healthcare efficiency. <a href="https://pavanuppu.pythonanywhere.com/"> Visit WellCare Project Site</a></p>
                 </div>
+                
                 <div class="project-card">
                     <h3>Secure User Registration and Login System</h3>
                     <p><strong>Framework:</strong> Spring Boot (Java framework)</p>
@@ -117,10 +134,24 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="animated-footer">
         <div class="container">
             <p>&copy; 2024 Pavan. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // Add simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            window.addEventListener('scroll', function() {
+                let scrollPosition = window.scrollY + window.innerHeight;
+                sections.forEach(section => {
+                    if (section.offsetTop < scrollPosition - 100) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
