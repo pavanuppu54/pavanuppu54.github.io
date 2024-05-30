@@ -199,3 +199,18 @@ footer p {
         margin: 0.5rem 0;
     }
 }
+
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    color: #3498db;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #2c3e50; /* Dark Blue */
+}
